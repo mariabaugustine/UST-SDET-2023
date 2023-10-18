@@ -9,9 +9,9 @@ namespace Assignments
     internal class Student
     {
        public string fullname;
-        int mark1,mark2,mark3;
+        double mark1,mark2,mark3;
 
-        public Student(string fullname,int mark1, int mark2, int mark3)
+        public Student(string fullname,double mark1, double mark2, double mark3)
         {
             this.fullname = fullname;
             this.mark1 = mark1;
