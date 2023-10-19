@@ -29,6 +29,26 @@
 using Basic_Programs;
 //Electricity electricity=new ();
 //Console.WriteLine(electricity.CalculateBill());
-Electricity electricity = new(12345, 9000, 9600, "xx");
-Console.WriteLine(electricity.CalculateBill());
+
+//*************************Employee**************************************//
+//Employee employee = new(100, "AAA", "IT", 250000);
+//Console.WriteLine("Employee Id:"+employee.Emp_id);
+//Console.WriteLine("Name:"+employee.Emp_name);
+//Console.WriteLine("Department:"+employee.Department);
+//Console.WriteLine("Basic Pay:"+employee.Basic_pay);
+//Console.WriteLine("Salary:"+employee.CalculateSalary());
+//Console.WriteLine("Employee id:{0} \n" +
+//    "Employee Name:{1} \n" +
+//    " Basic Pay:{2}\n" +
+//    "NetSalary:{3}",
+//    employee.Emp_id,
+//    employee.Emp_name,
+//    employee.Basic_pay,
+//    employee.CalculateSalary()
+//    ); 
+//*************************************Arrays**********************************//
+ArrayExample arrayExample = new ArrayExample();
+arrayExample.Onedim();
+arrayExample.TwoDimensinalAraay();
+arrayExample.JaggedArraay();
 
