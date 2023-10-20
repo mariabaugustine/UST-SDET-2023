@@ -43,10 +43,20 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //    Console.WriteLine();
 //}
 /************************************************20/10/2023**********************************************/
-ElectronicProduct electronicProduct=new ElectronicProduct("TV",12434,3,5);
+//ElectronicProduct electronicProduct=new ElectronicProduct("TV",12434,3,5);
 //Console.WriteLine($"Product Name:{0}\nPrice:{1}\nQuantity:{2}\nWarranty Period:{3}"+electronicProduct.ProductName,electronicProduct.Price,electronicProduct.Quantity,electronicProduct.WarrantyPeriod);
-electronicProduct.DisplayDetails();
-Console.WriteLine("Warranty Period:"+electronicProduct.DisplayWarrantyPeriod());
+//electronicProduct.DisplayDetails();
+//Console.WriteLine("Warranty Period:"+electronicProduct.DisplayWarrantyPeriod());
+/*******************************************************************************************************/
+//DigitalProduct digitalProduct = new DigitalProduct("pdf", "Mobile", 45000, 4, 3);
+//digitalProduct.DisplayDetails();
+//Console.WriteLine("Warranty Period:" +digitalProduct.DisplayWarrantyPeriod());
+//Console.WriteLine("File Format:"+digitalProduct.DisplayFileFormat());
+/******************************************************************************/
+ClothingProduct cp = new ClothingProduct("Fridge", 23000, 3, "4.5");
+cp.DisplayDetails();
+Console.WriteLine("Size:" +cp.DisplaySize());
+
 
 
 
