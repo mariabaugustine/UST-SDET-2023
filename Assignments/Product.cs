@@ -32,11 +32,11 @@ namespace Assignments
             double totalValue = price * quantity;
             return totalValue;
         }
-        //public void Display()
-        //{
-        //    Console.WriteLine("Product Name:"+productName);
-        //    Console.WriteLine("Price:" + price);
-        //    Console.WriteLine("Quantity:" + Quantity);
-        //}
+        public void DisplayDetails()
+        {
+            Console.WriteLine("product name:" + ProductName);
+            Console.WriteLine("price:" + price);
+            Console.WriteLine("quantity:" + quantity);
+        }
     }
 }

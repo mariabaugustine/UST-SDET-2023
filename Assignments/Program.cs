@@ -20,31 +20,35 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //    Console.WriteLine("Total Value:" + product.ProductValue());
 //    Console.WriteLine();
 //}
-//********************************************
-Students[] students = new Students[3];
-students[0] = new Students("Abi", new int[]{ 30,60,80});
-students[1] = new Students("Bhagya", new int[] { 90, 87, 94 });
-students[2] = new Students("Athira", new int[] { 89, 85, 96 });
-Console.WriteLine("*********************STUDENT DETAILS******************************");
-Console.WriteLine();
-foreach (var student in students)
-{
-    Console.WriteLine("Student Name:" + student.Name);
-    Console.Write("Mark:");
-    foreach (var student2 in student.Marks)
-    {
-        Console.Write(student2 + ",");
+//********************************************STUDENT(19/10/2023*********************************
+//Students[] students = new Students[3];
+//students[0] = new Students("Abi", new int[] { 30, 60, 80 });
+//students[1] = new Students("Bhagya", new int[] { 90, 87, 94 });
+//students[2] = new Students("Athira", new int[] { 89, 85, 96 });
+//Console.WriteLine("*********************STUDENT DETAILS******************************");
+//Console.WriteLine();
+//foreach (var student in students)
+//{
+//    Console.WriteLine("Student Name:" + student.Name);
+//    Console.Write("Mark:");
+//    foreach (var student2 in student.Marks)
+//    {
+//        Console.Write(student2 + ",");
 
-    }
-    Console.WriteLine();
-    Console.WriteLine("Total:" + student.Marks.Sum());
-    Console.WriteLine("Average:" + student.Marks.Average());
-    Console.WriteLine("Grade:" + student.CalculateGrade());
-    Console.WriteLine(student.GetMarkSummary());
-    Console.WriteLine();
-}
+//    }
+//    Console.WriteLine("\nTotal:" + student.Marks.Sum());
+//    Console.WriteLine("Average:" + student.Marks.Average());
+//    Console.WriteLine("Grade:" + student.CalculateGrade());
+//    Console.WriteLine(student.GetMarkSummary());
+//    Console.WriteLine();
+//}
+/************************************************20/10/2023**********************************************/
+ElectronicProduct electronicProduct=new ElectronicProduct("TV",12434,3,5);
+//Console.WriteLine($"Product Name:{0}\nPrice:{1}\nQuantity:{2}\nWarranty Period:{3}"+electronicProduct.ProductName,electronicProduct.Price,electronicProduct.Quantity,electronicProduct.WarrantyPeriod);
+electronicProduct.DisplayDetails();
+Console.WriteLine("Warranty Period:"+electronicProduct.DisplayWarrantyPeriod());
 
 
 
 
-  
+
