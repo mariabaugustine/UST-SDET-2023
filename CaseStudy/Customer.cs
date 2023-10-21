@@ -11,6 +11,13 @@ namespace CaseStudy
         public int CustomerId;
         public string? Name;
         public string? ContactDetails;
+
+        public Customer(int customerId, string? name, string? contactDetails)
+        {
+            CustomerId = customerId;
+            Name = name;
+            ContactDetails = contactDetails;
+        }
         
     }
 }

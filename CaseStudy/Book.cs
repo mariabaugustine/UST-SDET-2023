@@ -28,7 +28,11 @@ namespace CaseStudy
         
        public void DisplayBooks(Book book1)
         {
-                Console.WriteLine("Title:"+Title);
+            Console.WriteLine("Type:" + Type); ;
+            Console.WriteLine("Title:" + Title);
+            Console.WriteLine("Authors:"+Authors);
+            Console.WriteLine("ISBN:"+Price);
+            Console.WriteLine("Price"+Availability);
         }
        
 
