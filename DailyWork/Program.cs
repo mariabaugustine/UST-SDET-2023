@@ -106,10 +106,15 @@ Console.WriteLine(ev.SetVehicleType());
 //doctor.ModifyDoctor();
 //doctor.DisplayDoctorDetails();
 /*--------------------------------------------------------*/
-Doctor doctor = new Doctor();
+/*Doctor doctor = new Doctor();
 doctor.AddNewDoctor();
 doctor.ModifyDoctor();
 doctor.DisplayDoctorDetails();
 doctor.BookApp(111, "Santhosh");
-doctor.DelApp(245, "Ravi");
+doctor.DelApp(245, "Ravi");*/
+Surgeon surgeon = new Surgeon();
+surgeon.AddNewDoctor();
+surgeon.ModifyDoctor();
+surgeon.DisplayDoctorDetails();
+/*******************************************************/
 

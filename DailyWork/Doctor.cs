@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DailyWork
 {
-    internal class Doctor:Calculation/*Class must come before inerface*/,IDoctor,IAppointment
+    internal class Doctor:/*Class must come before inerface*/IDoctor,IAppointment
     {
         public int Did { get; set; }
         public string? DName { get; set; }
