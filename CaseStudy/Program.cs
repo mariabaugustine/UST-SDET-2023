@@ -1,7 +1,8 @@
 ﻿using CaseStudy;
 int choice;
+double total;
 Book[] book = new Book[1];
-Customer[] customers = new Customer[1];
+//Customer[] customers = new Customer[1];
 Console.WriteLine("******************************************Online Book Store*********************************");
 Console.WriteLine("1.Add Book\n2.Add Customer\n3.View Books\n4.Search Book\n5.Place Order\n7.Exit");
 do
@@ -30,15 +31,18 @@ do
 
             break;
         case 2:
+            
             Console.WriteLine("Enter the Customer Id");
             int id=Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the Customer Name:");
             string CustomerName=Console.ReadLine();
             Console.WriteLine("Contact Details:");
             string?mobile=Console.ReadLine();
-            Customer customer=new Customer(id,CustomerName,mobile);
+            Customer customers=new Customer(id,CustomerName,mobile);
+            
            
 
+            
             break;
         case 3:
             foreach (var item in book)
@@ -63,9 +67,31 @@ do
                     Console.WriteLine($"{0} is not availabile",Title1);
                 }
             }
-
-            break;
             
+            break;
+        case 5:
+            Console.Write("Enter the Book Title To Search:");
+            string? Title2 = Console.ReadLine();
+            foreach(var item in book)
+            {
+                if(item.Title==Title2)
+                {
+                    Console.WriteLine("enter the order date:");
+                    string date = Console.ReadLine();
+                    Console.WriteLine("Order placed!!");
+                    total = item.Price;
+
+                    Order order1 = new Order(date,total);
+                    order1.OrderDetails();
+                    Console.WriteLine("Title2:"+Title2);
+                    Console.WriteLine("Price:"+item.Price);
+                   
+                    
+                }
+
+            }
+
+                break;
     }
     Console.WriteLine("Do you wish to Continue?\n 1.Yes\n2.No");
     choice=Convert.ToInt32(Console.ReadLine());

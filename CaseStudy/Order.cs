@@ -8,8 +8,21 @@ namespace CaseStudy
 {
     internal class Order
     {
-        public string[] books {  get; set; }
+        private string? date;
+        private double total;
+
+        public Order(string? date, double total)
+        {
+            this.date = date;
+            this.total = total;
+        }
+
+        //public string[] books {  get; set; }
         public DateTime OrderDate { get; set; }
         public double TotalCost { get; set; }
+        public void OrderDetails()
+        {
+            Console.WriteLine($"Order date:"+date +"\n" +"Total price:"+total);
+        }
     }
 }
