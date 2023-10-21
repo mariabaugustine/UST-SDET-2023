@@ -100,5 +100,16 @@ pv.Model = "fgd";
 ev.DisplayDetails();
 Console.WriteLine(ev.SetVehicleType());
 */
-
+/********************************************INTERFACE***********************************************************/
+//IDoctor doctor = new Doctor();
+//doctor.AddNewDoctor();
+//doctor.ModifyDoctor();
+//doctor.DisplayDoctorDetails();
+/*--------------------------------------------------------*/
+Doctor doctor = new Doctor();
+doctor.AddNewDoctor();
+doctor.ModifyDoctor();
+doctor.DisplayDoctorDetails();
+doctor.BookApp(111, "Santhosh");
+doctor.DelApp(245, "Ravi");
 
