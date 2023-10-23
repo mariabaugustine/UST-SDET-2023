@@ -57,32 +57,32 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //cp.DisplayDetails();
 //Console.WriteLine("Size:" +cp.DisplaySize());
 /**************************************************************************/
-//Console.Write("Enter the employee Id:");
-//int id=Convert.ToInt32(Console.ReadLine());
-//Console.Write("Enter the first Name:");
-//string firstName=Console.ReadLine();
-//Console.Write("Enter the Last Name:");
-//string lastName = Console.ReadLine();
-//Console.Write("Enter the Age:");
-//int age =Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter the employee Id:");
+int id = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter the first Name:");
+string firstName = Console.ReadLine();
+Console.Write("Enter the Last Name:");
+string lastName = Console.ReadLine();
+Console.Write("Enter the Age:");
+int age = Convert.ToInt32(Console.ReadLine());
 
-//Employee employee = new Employee(firstName,lastName,age,id);
-//employee.DisplayInfo(age);
+Employee employee = new Employee(firstName, lastName, age, id);
+employee.DisplayInfo(age);
 /*************************************************************************/
-Console.Write("Enter the Radius:");
-double radius=Convert.ToDouble(Console.ReadLine());
-Circle circle=new Circle(radius);
-circle.Draw();
-Console.WriteLine("Area:"+circle.CalculateArea());
-Console.WriteLine("Perimeter:"+circle.CalculatePerimeter());
-Console.Write("Enter the Length:");
-double length = Convert.ToDouble(Console.ReadLine());
-Console.Write("Enter the Width:");
-double width=Convert.ToDouble(Console.ReadLine());
-Rectangle rectangle = new Rectangle(length, width);
-rectangle.Draw();
-Console.WriteLine("Area:"+rectangle.CalculateArea());
-Console.WriteLine("Perimeter:"+rectangle.CalculatePerimeter());
+//Console.Write("Enter the Radius:");
+//double radius=Convert.ToDouble(Console.ReadLine());
+//Circle circle=new Circle(radius);
+//circle.Draw();
+//Console.WriteLine("Area:"+circle.CalculateArea());
+//Console.WriteLine("Perimeter:"+circle.CalculatePerimeter());
+//Console.Write("Enter the Length:");
+//double length = Convert.ToDouble(Console.ReadLine());
+//Console.Write("Enter the Width:");
+//double width=Convert.ToDouble(Console.ReadLine());
+//Rectangle rectangle = new Rectangle(length, width);
+//rectangle.Draw();
+//Console.WriteLine("Area:"+rectangle.CalculateArea());
+//Console.WriteLine("Perimeter:"+rectangle.CalculatePerimeter());
 
 
 
