@@ -112,9 +112,31 @@ doctor.ModifyDoctor();
 doctor.DisplayDoctorDetails();
 doctor.BookApp(111, "Santhosh");
 doctor.DelApp(245, "Ravi");*/
-Surgeon surgeon = new Surgeon();
-surgeon.AddNewDoctor();
-surgeon.ModifyDoctor();
-surgeon.DisplayDoctorDetails();
-/*******************************************************/
+//Surgeon surgeon = new Surgeon();
+//surgeon.AddNewDoctor();
+//surgeon.ModifyDoctor();
+//surgeon.DisplayDoctorDetails();
+/*************************************BANK(23/10/2023*********************************************/
+BankExample bankExample = new(123, 987654321L, "ABCD", "Inactive");
+Console.WriteLine("Enter the choice:\n 1.CustomerId\n2.Customer Name\n3.Account Number");
+int ch = Convert.ToInt32(Console.ReadLine());
+switch(ch)
+{
+    case 1:
+        Console.WriteLine("Customer Id:");
+        bankExample.GetAccountDetails(Convert.ToInt32(Console.ReadLine()));
+        break;
+    case 2:
+        Console.WriteLine("Customer Name:");
+        bankExample.GetAccountDetails(Console.ReadLine());
+        break;
+    case 3:
+        Console.WriteLine("Account Number:");
+        bankExample.Equals(Convert.ToInt64(Console.ReadLine()));
+        break;
+    default:
+        Console.WriteLine("Inavalid Operation");
+        break; 
+}
+
 
