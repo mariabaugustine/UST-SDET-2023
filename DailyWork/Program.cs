@@ -143,10 +143,14 @@ doctor.DelApp(245, "Ravi");*/
 //        Console.WriteLine("Inavalid Operation");
 //        break; 
 //}
-NGC nGC = new NGC();
+//NGC nGC = new NGC();
 //nGC.ArraayListHandling();
 
 //nGC.QueueHandling();
 //nGC.StackHandling();
 //nGC.HtHandling();
-nGC.SLHandling();
+//nGC.SLHandling();
+DailyWork.GC gC = new();
+//gC.ListHandling();
+gC.StackHandling();
+gC.QueueHandling();

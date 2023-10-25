@@ -70,7 +70,7 @@ namespace DailyWork
             queue.Enqueue(30);
             queue.Enqueue(88.87645454);
             foreach (var item in queue)
-            {
+           {
                 Console.WriteLine(item);
             }
             Console.WriteLine("Element at Peek:"+queue.Peek());
