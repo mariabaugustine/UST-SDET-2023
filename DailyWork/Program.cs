@@ -120,28 +120,33 @@ doctor.DelApp(245, "Ravi");*/
 //BankExample bankExample = new(123, 987654321L, "ABCD", "Inactive");
 //BankExample bank = new(567, 123456789L, "QWERT");
 //BankExample bank1 = new BankExample();
-BankNew bank1 = new(123, 145789088686L, "MBA", "Active");
+//BankNew bank1 = new(123, 145789088686L, "MBA", "Active");
 //bank1.WelcomeMessage();
-bank1.WelcomeMessage();
-Console.WriteLine("Enter the choice:\n 1.CustomerId\n2.Customer Name\n3.Account Number");
-int ch = Convert.ToInt32(Console.ReadLine());
-switch(ch)
-{
-    case 1:
-        Console.WriteLine("Customer Id:");
-        bank1.GetAccountDetails(Convert.ToInt32(Console.ReadLine()));
-        break;
-    case 2:
-        Console.WriteLine("Customer Name:");
-        bank1.GetAccountDetails(Console.ReadLine());
-        break;
-    case 3:
-        Console.WriteLine("Account Number:");
-        bank1.Equals(Convert.ToInt64(Console.ReadLine()));
-        break;
-    default:
-        Console.WriteLine("Inavalid Operation");
-        break; 
-}
+//bank1.WelcomeMessage();
+//Console.WriteLine("Enter the choice:\n 1.CustomerId\n2.Customer Name\n3.Account Number");
+//int ch = Convert.ToInt32(Console.ReadLine());
+//switch(ch)
+//{
+//    case 1:
+//        Console.WriteLine("Customer Id:");
+//        bank1.GetAccountDetails(Convert.ToInt32(Console.ReadLine()));
+//        break;
+//    case 2:
+//        Console.WriteLine("Customer Name:");
+//        bank1.GetAccountDetails(Console.ReadLine());
+//        break;
+//    case 3:
+//        Console.WriteLine("Account Number:");
+//        bank1.Equals(Convert.ToInt64(Console.ReadLine()));
+//        break;
+//    default:
+//        Console.WriteLine("Inavalid Operation");
+//        break; 
+//}
+NGC nGC = new NGC();
+//nGC.ArraayListHandling();
 
-
+//nGC.QueueHandling();
+//nGC.StackHandling();
+//nGC.HtHandling();
+nGC.SLHandling();
