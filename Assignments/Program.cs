@@ -1,4 +1,5 @@
 ﻿using Assignments;
+using System.Transactions;
 //********************************18/10/2023****************************************************
 /*Student student = new("Aleena", 50, 40, 80)
 Console.WriteLine("Name:" + student.fullname);
@@ -57,17 +58,17 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //cp.DisplayDetails();
 //Console.WriteLine("Size:" +cp.DisplaySize());
 /**************************************************************************/
-Console.Write("Enter the employee Id:");
-int id = Convert.ToInt32(Console.ReadLine());
-Console.Write("Enter the first Name:");
-string firstName = Console.ReadLine();
-Console.Write("Enter the Last Name:");
-string lastName = Console.ReadLine();
-Console.Write("Enter the Age:");
-int age = Convert.ToInt32(Console.ReadLine());
+//Console.Write("Enter the employee Id:");
+//int id = Convert.ToInt32(Console.ReadLine());
+//Console.Write("Enter the first Name:");
+//string firstName = Console.ReadLine();
+//Console.Write("Enter the Last Name:");
+//string lastName = Console.ReadLine();
+//Console.Write("Enter the Age:");
+//int age = Convert.ToInt32(Console.ReadLine());
 
-Employee employee = new Employee(firstName, lastName, age, id);
-employee.DisplayInfo(age);
+//Employee employee = new Employee(firstName, lastName, age, id);
+//employee.DisplayInfo(age);
 /*************************************************************************/
 //Console.Write("Enter the Radius:");
 //double radius=Convert.ToDouble(Console.ReadLine());
@@ -83,6 +84,18 @@ employee.DisplayInfo(age);
 //rectangle.Draw();
 //Console.WriteLine("Area:"+rectangle.CalculateArea());
 //Console.WriteLine("Perimeter:"+rectangle.CalculatePerimeter());
+Console.Write("Enter the PolicyId:");
+int policyId = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter the Policy Name:");
+string policyName=Console.ReadLine();
+Console.Write("Enter the Premium Amount:");
+double premiumAmount=Convert.ToDouble(Console.ReadLine());
+InsurancePolicy policy = new InsurancePolicy(policyId,policyName,premiumAmount);
+Console.Write("Enter the Renewed Premium Amount:");
+double NAmount=Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Renewed Policy"+policy.RenewPolicy(NAmount));
+Console.Write("Premium Amount:" + policy.RenewPolicy());
+
 
 
 
