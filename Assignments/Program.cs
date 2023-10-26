@@ -95,17 +95,27 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //double NAmount=Convert.ToDouble(Console.ReadLine());
 //Console.WriteLine("Renewed Policy"+policy.RenewPolicy(NAmount));
 //Console.Write("Premium Amount:" + policy.RenewPolicy());
-
-Console.Write("Enter the PolicyId:");
-int policyId = Convert.ToInt32(Console.ReadLine());
-Console.Write("Enter the Policy Name:");
-string policyName = Console.ReadLine();
-Console.Write("Enter the Policy Amount:");
-double premiumAmount = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Enter the age:");
-int age=Convert.ToInt32(Console.ReadLine());
-LifeInsurance lifeInsurance=new LifeInsurance(policyId,policyName,premiumAmount,age);
-Console.WriteLine("Premium Amount:"+lifeInsurance.CalculatePremium());
+/**********************************************************************************************************/
+//Console.Write("Enter the PolicyId:");
+//int policyId = Convert.ToInt32(Console.ReadLine());
+//Console.Write("Enter the Policy Name:");
+//string policyName = Console.ReadLine();
+//Console.Write("Enter the Policy Amount:");
+//double premiumAmount = Convert.ToDouble(Console.ReadLine());
+//Console.WriteLine("Enter the age:");
+//int age=Convert.ToInt32(Console.ReadLine());
+//LifeInsurance lifeInsurance=new LifeInsurance(policyId,policyName,premiumAmount,age);
+//Console.WriteLine("Premium Amount:"+lifeInsurance.CalculatePremium());
+//Console.Write("Enter the PolicyId:");
+//int policyId1 = Convert.ToInt32(Console.ReadLine());
+//Console.Write("Enter the Policy Name:");
+//string policyName1 = Console.ReadLine();
+//Console.Write("Enter the Policy Amount:");
+//double premiumAmount1 = Convert.ToDouble(Console.ReadLine());
+//Console.Write("Enter the car type:");
+//string type = Console.ReadLine().ToLower();
+//CarInsurance car = new CarInsurance(policyId1, policyName1, premiumAmount1, type);
+//Console.WriteLine(car.CalculatePremium());
 
 
 

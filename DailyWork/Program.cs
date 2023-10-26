@@ -150,7 +150,9 @@ doctor.DelApp(245, "Ravi");*/
 //nGC.StackHandling();
 //nGC.HtHandling();
 //nGC.SLHandling();
-DailyWork.GC gC = new();
+//DailyWork.GC gC = new();
 //gC.ListHandling();
-gC.StackHandling();
-gC.QueueHandling();
+//gC.StackHandling();
+//gC.QueueHandling();
+ExceptionHandling exceptionHandling = new(12, 5);
+exceptionHandling.Divide();
