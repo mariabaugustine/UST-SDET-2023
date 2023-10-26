@@ -127,3 +127,4 @@ CallRecord record = new CallRecord();
 Console.WriteLine("Enter the phone number");
 long number=Convert.ToInt64(Console.ReadLine());
 CallRecord.CallHistory(number);
+CallRecord.CallCounts();
