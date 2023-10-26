@@ -35,6 +35,14 @@ namespace Assignments
                 Console.WriteLine("No record Found ");
             }
         }
+        public void DisplayDetails()
+        {
+            foreach(var customer in Customers) 
+            {
+                Console.WriteLine("Customer Id:"+customer.CustomerId+"\n"+"Name:"+customer.CustomerName+"\n"+"Phone Number:"+customer.PhoneNumber+"\n"+"Balance:"+customer.Balance);
+                Console.WriteLine("\n");
+            }
+        }
 
 
     }

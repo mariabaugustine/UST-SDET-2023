@@ -1,5 +1,5 @@
 ﻿using Assignments;
-using System.Transactions;
+//using System.Transactions;
 //********************************18/10/2023****************************************************
 /*Student student = new("Aleena", 50, 40, 80)
 Console.WriteLine("Name:" + student.fullname);
@@ -116,17 +116,14 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //string type = Console.ReadLine().ToLower();
 //CarInsurance car = new CarInsurance(policyId1, policyName1, premiumAmount1, type);
 //Console.WriteLine(car.CalculatePremium());
-
-Customer customer=new Customer();
-Console.Write("Enter the Phone number:");
-long number = Convert.ToInt64(Console.ReadLine());
-customer.SearchDetails(number);
-
-
-
-
-
-
-
-
-
+/***********************************************************************************************/
+//Customer customer=new Customer();
+//customer.DisplayDetails();
+//Console.Write("Enter the Phone number:");
+//long number = Convert.ToInt64(Console.ReadLine());
+//customer.SearchDetails(number);
+/*************************************************************************************************/
+CallRecord record = new CallRecord();
+Console.WriteLine("Enter the phone number");
+long number=Convert.ToInt64(Console.ReadLine());
+CallRecord.CallHistory(number);
