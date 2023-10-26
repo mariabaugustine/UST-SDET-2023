@@ -117,7 +117,10 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //CarInsurance car = new CarInsurance(policyId1, policyName1, premiumAmount1, type);
 //Console.WriteLine(car.CalculatePremium());
 
-
+Customer customer=new Customer();
+Console.Write("Enter the Phone number:");
+long number = Convert.ToInt64(Console.ReadLine());
+customer.SearchDetails(number);
 
 
 

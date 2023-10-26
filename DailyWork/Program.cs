@@ -1,4 +1,5 @@
 ﻿using DailyWork;
+using DailyWork.ExceptionMessages;
 //Console.WriteLine("Enter two numbers");
 //double number1, number2, answer;
 //number1 = Convert.ToInt32(Console.ReadLine());
@@ -154,5 +155,47 @@ doctor.DelApp(245, "Ravi");*/
 //gC.ListHandling();
 //gC.StackHandling();
 //gC.QueueHandling();
-ExceptionHandling exceptionHandling = new(12, 5);
-exceptionHandling.Divide();
+ExceptionHandling exceptionHandling = new(3, 5);
+//try
+//{
+//    exceptionHandling.NumberCheck();
+//}
+//catch (ArgumentException ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+//try
+//{
+//    exceptionHandling.Divide();
+//}
+//catch (ArithmeticException ex)
+//{
+//    Console.WriteLine(MyExceptions.exceptionmessage[0]);
+//    Console.WriteLine(ex.StackTrace);
+//    Console.WriteLine(ex.Source);
+//}
+//catch (IndexOutOfRangeException ex)
+//{
+//    Console.WriteLine(MyExceptions.exceptionmessage[1]);
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine(MyExceptions.exceptionmessage[2]);
+//}
+try
+{
+    exceptionHandling.NumberCheck1();
+}
+catch(Number1Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+try
+{
+    exceptionHandling.NumberCheck2();
+
+}
+catch(Number2Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}

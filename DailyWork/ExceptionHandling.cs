@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DailyWork.ExceptionMessages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,7 @@ namespace DailyWork
         
         public void Divide()
         {
-            try
-            {
+            
                 int[] numbers = { 10, 20, 30 };
 
                 int result =Number1/Number2;
@@ -35,16 +35,31 @@ namespace DailyWork
                 //    result = number / Number2;
                 //    Console.WriteLine("RESULT:" + result);
                 //}
-            }
-            catch(ArithmeticException ex)
+           
+           
+        }
+        public void NumberCheck1()
+        {
+            if (Number1 > 100)
             {
-                Console.WriteLine(ex.Message);
-                Console.WriteLine(ex.StackTrace);
-                Console.WriteLine(ex.Source);
+                Console.WriteLine("Congrats");
             }
-            catch(IndexOutOfRangeException ex)
+            else
             {
-                Console.WriteLine(ex.Message);
+                throw new Number1Exception(MyExceptions.exceptionmessage[4]);
+            }
+
+        }
+        public void NumberCheck2()
+        {
+            if(Number2<100)
+            {
+                Console.WriteLine("Congrats");
+
+            }
+            else
+            {
+                throw new Number2Exception(MyExceptions.exceptionmessage[4]);
             }
         }
     }
