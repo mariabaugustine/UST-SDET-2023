@@ -181,40 +181,41 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
        
 
 /***************************************************************************************************/
-Patient patient = new Patient();
-int option=1;
-do
-{
-    Console.WriteLine("Enter the choice:");
-    Console.WriteLine("1.Add Patient Record\n2.View Patient Record\n3.Exit");
-    switch (Convert.ToInt32(Console.ReadLine()))
-    {
-        case 1:
-            Console.Write("Enter the patient Id:");
-            int id = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter the Name:");
-            string name = Console.ReadLine();
-            Console.Write("Enter the Age:");
-            int age = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter the Diagnosis:");
-            string diagnosis = Console.ReadLine();
-            patient.AddPatientTextFile(id, name, age, diagnosis);
-            break;
+//Patient patient = new Patient();
+//int option=1;
+//do
+//{
+//    Console.WriteLine("Enter the choice:");
+//    Console.WriteLine("1.Add Patient Record\n2.View Patient Record\n3.Exit");
+//    switch (Convert.ToInt32(Console.ReadLine()))
+//    {
+//        case 1:
+//            Console.Write("Enter the patient Id:");
+//            int id = Convert.ToInt32(Console.ReadLine());
+//            Console.Write("Enter the Name:");
+//            string name = Console.ReadLine();
+//            Console.Write("Enter the Age:");
+//            int age = Convert.ToInt32(Console.ReadLine());
+//            Console.Write("Enter the Diagnosis:");
+//            string diagnosis = Console.ReadLine();
+//            patient.AddPatientTextFile(id, name, age, diagnosis);
+//            break;
         
-            case 2:
-            patient.ReadDetails();
-            break;
+//            case 2:
+//            patient.ReadDetails();
+//            break;
 
-        case 3:
-            Environment.Exit(0);
-            break;
-        default:
-            Console.WriteLine("Invalid choice");
-            break;
+//        case 3:
+//            Environment.Exit(0);
+//            break;
+//        default:
+//            Console.WriteLine("Invalid choice");
+//            break;
 
-    }  
-    Console.WriteLine("Do you wish to continue?\n1.Yes\n2.No");
-    option=Convert.ToInt32(Console.ReadLine());
-}
-while(option!=2);
-
+//    }  
+//    Console.WriteLine("Do you wish to continue?\n1.Yes\n2.No");
+//    option=Convert.ToInt32(Console.ReadLine());
+//}
+//while(option!=2);
+/***********************************************************************************************/
+Console.WriteLine("Enter the choice:\n1.")
