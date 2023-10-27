@@ -37,22 +37,7 @@ namespace Assignments
 
             }
         }
-        //public void validation(string name,int age,string diagnosism)
-        //{
-        //    if(name==null)
-        //    {
-        //        throw new MyExceptions(CustomException.exceptionmessage[0]);
-        //    }
-        //    if(age<0 && age>120)
-        //    {
-        //        throw  new MyExceptions(CustomException.exceptionmessage[1]);
-        //    }
-        //    if(diagnosism==null)
-        //    {
-        //        throw new MyExceptions(CustomException.exceptionmessage[2]);
-        //    }
-        //}
-        
+      
 
     }
 }

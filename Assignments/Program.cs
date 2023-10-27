@@ -131,21 +131,48 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //CallRecord.CallHistory(number);
 //CallRecord.CallCounts();
 /****************************************************************************************************/
-Patient patient = new Patient();
+//Patient patient = new Patient();
+//Console.Write("Enter the patient Id:");
+//int id=Convert.ToInt32(Console.ReadLine());
+//Console.Write("Enter the Name:");
+//string name=Console.ReadLine();
+//Console.Write("Enter the Age:");
+//int age = Convert.ToInt32(Console.ReadLine());
+//Console.Write("Enter the Diagnosis:");
+//string diagnosis = Console.ReadLine();
+//try
+//{
+//    patient.AddPatient(id, name, age, diagnosis);
+
+//}
+//catch(MyExceptions ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+/*****************************************************************27/10/2023*****************************/
+MedicalRecord medicalRecord = new MedicalRecord();
 Console.Write("Enter the patient Id:");
 int id=Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter the record Id:");
+int r_id=Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter the Name:");
 string name=Console.ReadLine();
 Console.Write("Enter the Age:");
 int age = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter the Diagnosis:");
 string diagnosis = Console.ReadLine();
+Console.Write("Enter the treatment cost:");
+double cost=Convert.ToDouble(Console.ReadLine());
 try
 {
-    patient.AddPatient(id, name, age, diagnosis);
-   
+    medicalRecord.AddMedicalRecord(r_id, id, name, age, diagnosis, cost);
+    medicalRecord.DisplayDetails();
 }
-catch(MyExceptions ex)
+catch(InvalidMedicalRecordException ex)
+{
+    Console.WriteLine(ex.Message);
+}
+catch(InvalidPatientDataException ex)
 {
     Console.WriteLine(ex.Message);
 }

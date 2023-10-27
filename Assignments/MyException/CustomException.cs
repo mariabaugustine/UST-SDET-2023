@@ -12,7 +12,9 @@ namespace Assignments.MyException
         {
             {1,"Age Should be between 0 and 120" },
             {2,"Patient name cannot be null" },
-            {3,"Diagnosis cannot be null" }
+            {3,"Diagnosis cannot be null" },
+            {4,"The patient name and diagnosis should not be empty" },
+            {5,"The treatment cost should be positive" }
            
         };
     }
@@ -23,4 +25,17 @@ namespace Assignments.MyException
         {
         }
     }
+    internal class InvalidPatientDataException:Exception
+    {
+        public InvalidPatientDataException(string message) : base(message)
+        {
+        }
+    }
+    internal class InvalidMedicalRecordException:Exception
+    {
+        public InvalidMedicalRecordException(string message) : base(message)
+        {
+        }
+    }
+
 }
