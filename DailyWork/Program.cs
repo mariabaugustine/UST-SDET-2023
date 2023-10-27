@@ -182,20 +182,23 @@ ExceptionHandling exceptionHandling = new(3, 5);
 //{
 //    Console.WriteLine(MyExceptions.exceptionmessage[2]);
 //}
-try
-{
-    exceptionHandling.NumberCheck1();
-}
-catch(Number1Exception ex)
-{
-    Console.WriteLine(ex.Message);
-}
-try
-{
-    exceptionHandling.NumberCheck2();
+//try
+//{
+//    exceptionHandling.NumberCheck1();
+//}
+//catch(Number1Exception ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+//try
+//{
+//    exceptionHandling.NumberCheck2();
 
-}
-catch(Number2Exception ex)
-{
-    Console.WriteLine(ex.Message);
-}
+//}
+//catch(Number2Exception ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+/*****************************************************************************************************/
+FileOperation operation = new();
+operation.CreateFile();
