@@ -201,4 +201,9 @@ ExceptionHandling exceptionHandling = new(3, 5);
 //}
 /*****************************************************************************************************/
 FileOperation operation = new();
-operation.CreateFile();
+//operation.CreateFile();
+//operation.WriteData();
+//operation.ReadData();
+//operation.CopyMoveFile();
+//operation.DeleteFile();
+operation.FileProperties();
