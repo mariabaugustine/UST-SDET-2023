@@ -37,9 +37,27 @@ namespace Assignments
 
             }
         }
-        public void AddPatientTextFile()
+        public void AddPatientTextFile(int id,string name,int age,string diagnosis)
         {
-            FileInfo info=new FileInfo()
+            FileStream fileStream = new FileStream("C:\\Users\\Administrator\\Desktop\\Files\\Patient\\patient.txt", FileMode.Create, FileAccess.Write);
+            StreamWriter writer = new StreamWriter(fileStream);
+            writer.WriteLine("Patient Id:"+id);
+            writer.WriteLine("Patient Name:"+name);
+            writer.WriteLine("Age:"+age);
+            writer.WriteLine("Diagnosis:"+diagnosis);
+            writer.Close();
+            fileStream.Close();
+
+
+        }
+        public void ReadDetails()
+        {
+            FileStream fileStream = new FileStream("C:\\Users\\Administrator\\Desktop\\Files\\Patient\\patient.txt",FileMode.Open,FileAccess.Read);
+            StreamReader reader = new StreamReader(fileStream);
+            string str=reader.ReadToEnd();
+            Console.WriteLine(str);
+            reader.Close();
+            fileStream.Close ();
         }
       
 

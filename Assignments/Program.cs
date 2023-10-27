@@ -150,55 +150,71 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //    Console.WriteLine(ex.Message);
 //}
 /*****************************************************************27/10/2023*****************************/
-MedicalRecord medicalRecord = new MedicalRecord();
+//MedicalRecord medicalRecord = new MedicalRecord();
 
 
-        Console.Write("Enter the patient Id:");
-        int id = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Enter the record Id:");
-        int r_id = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Enter the Name:");
-        string name = Console.ReadLine();
-        Console.Write("Enter the Age:");
-        int age = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Enter the Diagnosis:");
-        string diagnosis = Console.ReadLine();
-        Console.Write("Enter the treatment cost:");
-        double cost = Convert.ToDouble(Console.ReadLine());
-        try
-        {
-            medicalRecord.AddMedicalRecord(r_id, id, name, age, diagnosis, cost);
-            medicalRecord.DisplayDetails();
-        }
-        catch (InvalidMedicalRecordException ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-        catch (InvalidPatientDataException ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
+//        Console.Write("Enter the patient Id:");
+//        int id = Convert.ToInt32(Console.ReadLine());
+//        Console.Write("Enter the record Id:");
+//        int r_id = Convert.ToInt32(Console.ReadLine());
+//        Console.Write("Enter the Name:");
+//        string name = Console.ReadLine();
+//        Console.Write("Enter the Age:");
+//        int age = Convert.ToInt32(Console.ReadLine());
+//        Console.Write("Enter the Diagnosis:");
+//        string diagnosis = Console.ReadLine();
+//        Console.Write("Enter the treatment cost:");
+//        double cost = Convert.ToDouble(Console.ReadLine());
+//        try
+//        {
+//            medicalRecord.AddMedicalRecord(r_id, id, name, age, diagnosis, cost);
+//            medicalRecord.DisplayDetails();
+//        }
+//        catch (InvalidMedicalRecordException ex)
+//        {
+//            Console.WriteLine(ex.Message);
+//        }
+//        catch (InvalidPatientDataException ex)
+//        {
+//            Console.WriteLine(ex.Message);
+//        }
        
 
 /***************************************************************************************************/
-Console.WriteLine("Enter the choice:");
-Console.WriteLine("1.Add Patient Record\n2.View Patient Record\n3.Exit");
-switch (Convert.ToInt32(Console.ReadLine()))
+Patient patient = new Patient();
+int option=1;
+do
 {
-    case 1:
-        Console.Write("Enter the patient Id:");
-        int id = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Enter the Name:");
-        string name = Console.ReadLine();
-        Console.Write("Enter the Age:");
-        int age = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Enter the Diagnosis:");
-        string diagnosis = Console.ReadLine();
+    Console.WriteLine("Enter the choice:");
+    Console.WriteLine("1.Add Patient Record\n2.View Patient Record\n3.Exit");
+    switch (Convert.ToInt32(Console.ReadLine()))
+    {
+        case 1:
+            Console.Write("Enter the patient Id:");
+            int id = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the Name:");
+            string name = Console.ReadLine();
+            Console.Write("Enter the Age:");
+            int age = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the Diagnosis:");
+            string diagnosis = Console.ReadLine();
+            patient.AddPatientTextFile(id, name, age, diagnosis);
+            break;
+        
+            case 2:
+            patient.ReadDetails();
+            break;
 
-        break;
-    case 2:
-        break;
-    case 3:
-        break;
+        case 3:
+            Environment.Exit(0);
+            break;
+        default:
+            Console.WriteLine("Invalid choice");
+            break;
+
+    }  
+    Console.WriteLine("Do you wish to continue?\n1.Yes\n2.No");
+    option=Convert.ToInt32(Console.ReadLine());
 }
+while(option!=2);
 
