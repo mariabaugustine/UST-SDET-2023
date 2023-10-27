@@ -1,4 +1,6 @@
 ﻿using Assignments;
+using Assignments.MyException;
+using System.Threading.Channels;
 //using System.Transactions;
 //********************************18/10/2023****************************************************
 /*Student student = new("Aleena", 50, 40, 80)
@@ -123,8 +125,28 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //long number = Convert.ToInt64(Console.ReadLine());
 //customer.SearchDetails(number);
 /*************************************************************************************************/
-CallRecord record = new CallRecord();
-Console.WriteLine("Enter the phone number");
-long number=Convert.ToInt64(Console.ReadLine());
-CallRecord.CallHistory(number);
-CallRecord.CallCounts();
+//CallRecord record = new CallRecord();
+//Console.WriteLine("Enter the phone number");
+//long number=Convert.ToInt64(Console.ReadLine());
+//CallRecord.CallHistory(number);
+//CallRecord.CallCounts();
+/****************************************************************************************************/
+Patient patient = new Patient();
+Console.Write("Enter the patient Id:");
+int id=Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter the Name:");
+string name=Console.ReadLine();
+Console.Write("Enter the Age:");
+int age = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter the Diagnosis:");
+string diagnosis = Console.ReadLine();
+try
+{
+    patient.AddPatient(id, name, age, diagnosis);
+   
+}
+catch(MyExceptions ex)
+{
+    Console.WriteLine(ex.Message);
+}
+
