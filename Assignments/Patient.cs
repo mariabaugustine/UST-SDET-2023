@@ -19,20 +19,20 @@ namespace Assignments
         public void AddPatient(int id,string?name,int age,string?diagnosis)
         {
 
-            if (name == null)
-            {
-                throw new MyExceptions(CustomException.exceptionmessage[1]);
-            }
-            else if (age < 0 && age > 120)
+            if (string.IsNullOrEmpty(name))
             {
                 throw new MyExceptions(CustomException.exceptionmessage[2]);
             }
-            else if (diagnosis == null)
+           else if (age < 0 ||age >= 120)
+            {
+                throw new MyExceptions(CustomException.exceptionmessage[1]);
+            }
+           else if (string.IsNullOrEmpty(diagnosis))
             {
                 throw new MyExceptions(CustomException.exceptionmessage[3]);
             }
             else
-            {
+            { 
                 patients.Add(new Patient { PatientID = id, PatientName = name, Age = age, Diagnosis = diagnosis });
 
             }
