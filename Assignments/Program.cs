@@ -151,29 +151,54 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //}
 /*****************************************************************27/10/2023*****************************/
 MedicalRecord medicalRecord = new MedicalRecord();
-Console.Write("Enter the patient Id:");
-int id=Convert.ToInt32(Console.ReadLine());
-Console.Write("Enter the record Id:");
-int r_id=Convert.ToInt32(Console.ReadLine());
-Console.Write("Enter the Name:");
-string name=Console.ReadLine();
-Console.Write("Enter the Age:");
-int age = Convert.ToInt32(Console.ReadLine());
-Console.Write("Enter the Diagnosis:");
-string diagnosis = Console.ReadLine();
-Console.Write("Enter the treatment cost:");
-double cost=Convert.ToDouble(Console.ReadLine());
-try
+
+
+        Console.Write("Enter the patient Id:");
+        int id = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter the record Id:");
+        int r_id = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter the Name:");
+        string name = Console.ReadLine();
+        Console.Write("Enter the Age:");
+        int age = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter the Diagnosis:");
+        string diagnosis = Console.ReadLine();
+        Console.Write("Enter the treatment cost:");
+        double cost = Convert.ToDouble(Console.ReadLine());
+        try
+        {
+            medicalRecord.AddMedicalRecord(r_id, id, name, age, diagnosis, cost);
+            medicalRecord.DisplayDetails();
+        }
+        catch (InvalidMedicalRecordException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        catch (InvalidPatientDataException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+       
+
+/***************************************************************************************************/
+Console.WriteLine("Enter the choice:");
+Console.WriteLine("1.Add Patient Record\n2.View Patient Record\n3.Exit");
+switch (Convert.ToInt32(Console.ReadLine()))
 {
-    medicalRecord.AddMedicalRecord(r_id, id, name, age, diagnosis, cost);
-    medicalRecord.DisplayDetails();
-}
-catch(InvalidMedicalRecordException ex)
-{
-    Console.WriteLine(ex.Message);
-}
-catch(InvalidPatientDataException ex)
-{
-    Console.WriteLine(ex.Message);
+    case 1:
+        Console.Write("Enter the patient Id:");
+        int id = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter the Name:");
+        string name = Console.ReadLine();
+        Console.Write("Enter the Age:");
+        int age = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter the Diagnosis:");
+        string diagnosis = Console.ReadLine();
+
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
 }
 

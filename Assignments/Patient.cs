@@ -37,6 +37,10 @@ namespace Assignments
 
             }
         }
+        public void AddPatientTextFile()
+        {
+            FileInfo info=new FileInfo()
+        }
       
 
     }
