@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CaseStudy.CustomException;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,14 @@ namespace CaseStudy
 
         public void PlacingOrder(Customers customer, double quantity)
         {
-            throw new NotImplementedException();
+            if (StockQuantity >= quantity)
+            {
+                StockQuantity -= quantity;
+            }
+            else
+            {
+                throw new OrderException(MyException.Errors[1]);
+            }
         }
 
         public void ProceesingPayment()

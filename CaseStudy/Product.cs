@@ -13,6 +13,6 @@ namespace CaseStudy
         
         public double Price { get; set; }
 
-        public double ProductQuantity {  get; set; }
+        public double StockQuantity {  get; set; }
     }
 }
