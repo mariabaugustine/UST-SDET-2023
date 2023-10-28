@@ -218,4 +218,31 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //}
 //while(option!=2);
 /***********************************************************************************************/
-Console.WriteLine("Enter the choice:\n1.")
+MedicalHistory medicalHistory = new MedicalHistory();
+int option = 1;
+do
+{
+    Console.WriteLine("Enter the choice:");
+    Console.WriteLine("1.Add Patient Record\n2.View Patient Record\n3.Exit");
+    switch (Convert.ToInt32(Console.ReadLine()))
+    {
+        case 1:
+            Console.Write("Enter the record Id:");
+            int r_id = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the patient Id:");
+            int p_id = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the Description:");
+            string description = Console.ReadLine();
+            Console.Write("Enter the Date:");
+            string date = Console.ReadLine();
+            medicalHistory.AddMedicalHistory(r_id, p_id, description, date);
+            medicalHistory.AddToFile(r_id, p_id, description, date);
+          break;
+        default:
+            Console.WriteLine("Invalid choice");
+            break;
+    }
+    Console.WriteLine("Do you wish to continue?\n1.Yes\n2.No");
+    option=Convert.ToInt32(Console.ReadLine());
+} while (option != 2);
+

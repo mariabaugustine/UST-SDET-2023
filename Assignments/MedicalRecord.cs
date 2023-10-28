@@ -40,6 +40,7 @@ namespace Assignments
                 Console.WriteLine("Diagnosis:" + item.Diagnosis);
                 Console.WriteLine("TreatmentCost:" + item.TreatmentCost);
             }
+            
         }
     }
 }
