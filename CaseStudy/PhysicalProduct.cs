@@ -8,33 +8,49 @@ using System.Threading.Tasks;
 namespace CaseStudy
 {
     internal class PhysicalProduct:Product,IOrderable
-    { 
-        public double Weight {  get; set; } 
-        public double dimension {  get; set; }
+    {
+        public static List<PhysicalProduct> Products = new List<PhysicalProduct>();
+        public double Weight { get; set; }
+        public string? Dimensions { get; set; }
 
-        
 
 
-        public void PlacingOrder(Customers customer, int quantity)
+
+        public void PlacingOrder()
         {
-            if (StockQuantity >= quantity)
+            Console.WriteLine("Do you want to continue the order\n1.yes\n2.no");
+            int option = Convert.ToInt32(Console.ReadLine());
+            if (option == 1)
             {
-                StockQuantity -= quantity;
+                if (StockQuantity > 0)
+                    Console.WriteLine("Continue to payment");
+                else
+                    Console.WriteLine("Product not available");
             }
             else
             {
-                throw new OrderException(MyException.Errors[1]);
+                Console.WriteLine("Returning");
             }
         }
 
-        public void DeleveringProduct(Customers customer)
+        public void DeleveringProduct()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("product is shipped and shipping cost is {0}", Weight * 10);
         }
 
         public void ProceesingPayment()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Enter the card details for product {0}", Name);
+            string? crednum = Console.ReadLine();
+            if (crednum == null)
+            {
+                Console.WriteLine("invalid number");
+            }
+            else
+            {
+                Console.WriteLine("payment successful");
+            }
         }
+        
     }
 }

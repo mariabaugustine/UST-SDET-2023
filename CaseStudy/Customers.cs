@@ -8,10 +8,15 @@ namespace CaseStudy
 {
     internal class Customers
     {
-        public int CustomerId {  get; set; }
-        public string?Name { get; set; }
+        public int CustomerID { get; set; }
+        public string? CustomerName { get; set; }
+        public string? CustomerEmail { get; set; }
 
-        public string?Email { get; set; }
+        public List<DigitalProduct> orders = new List<DigitalProduct>();
+        public List<PhysicalProduct> ordersphy = new List<PhysicalProduct>();
+        public List<DigitalProduct> confirmedorders = new List<DigitalProduct>();
+        public List<PhysicalProduct> confirmedordersphy = new List<PhysicalProduct>();
+        public static List<Customers> customers = new List<Customers>();
 
 
     }

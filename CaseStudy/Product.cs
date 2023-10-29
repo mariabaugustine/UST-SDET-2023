@@ -8,11 +8,9 @@ namespace CaseStudy
 {
     internal class Product
     {
-        public int ProductId {  get; set; }
-        public string? Name { get; set; }   
-        
+        public int ProductId { get; set; }
+        public string? Name { get; set; }
         public double Price { get; set; }
-
-        public double StockQuantity {  get; set; }
+        public int StockQuantity { get; set; }
     }
 }
