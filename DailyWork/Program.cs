@@ -200,10 +200,36 @@ ExceptionHandling exceptionHandling = new(3, 5);
 //    Console.WriteLine(ex.Message);
 //}
 /*****************************************************************************************************/
-FileOperation operation = new();
+//FileOperation operation = new();
 //operation.CreateFile();
 //operation.WriteData();
 //operation.ReadData();
 //operation.CopyMoveFile();
 //operation.DeleteFile();
-operation.FileProperties();
+//operation.FileProperties();
+
+/*************************************************************************************************************/
+//GenericExample<int> g1 = new(12, 21);
+//Console.WriteLine(g1.Val1+"     "+g1.Val2);
+
+//GenericExample<double> g2 = new(12.456, 21.678);
+//Console.WriteLine(g2.Val1 + "     " + g2.Val2);
+
+//GenericExample<string> g3 = new("abc","def");
+//Console.WriteLine(g3.Val1 + "     " + g3.Val2);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//GenericExample<int>generic=new GenericExample<int>(new int[3] {1,2,3});
+//generic.Display();
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+static void Swap<T>(ref T num1,ref T num2)
+{
+    T temp;
+    temp = num1;    
+    num1 = num2;
+    num2 = temp;
+}
+int n1=10, n2=10;
+char c1 = 'A', c2 = 'B';
+Swap<int>(ref n1,ref n2);
+Swap<char>(ref c1, ref c2);
+

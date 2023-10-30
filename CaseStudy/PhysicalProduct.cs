@@ -25,7 +25,7 @@ namespace CaseStudy
                 if (StockQuantity > 0)
                     Console.WriteLine("Continue to payment");
                 else
-                    Console.WriteLine("Product not available");
+                    Console.WriteLine("No product availabile");
             }
             else
             {
@@ -42,9 +42,9 @@ namespace CaseStudy
         {
             Console.WriteLine("Enter the card details for product {0}", Name);
             string? crednum = Console.ReadLine();
-            if (crednum == null)
+            if (string.IsNullOrEmpty(crednum))
             {
-                Console.WriteLine("invalid number");
+                throw new OrderException(MyException.Errors[4]);
             }
             else
             {
