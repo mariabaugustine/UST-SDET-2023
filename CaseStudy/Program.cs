@@ -211,6 +211,7 @@ try
                         item.PlacingOrder();
                         item.ProceesingPayment();
                         item.DeleveringProduct();
+                        Console.WriteLine("Order placed successfully");
                     }
                     Console.WriteLine("do you want to place all the order\n1.yes\n2.no");
                     int confirm = Convert.ToInt32(Console.ReadLine());
