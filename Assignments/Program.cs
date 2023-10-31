@@ -325,36 +325,53 @@ else
 //    }
 //
 
+//class Program
+//{
+//    public delegate decimal BonusCalculation(Employees employees);
+
+//    public static void Main(string[] args)
+//    {
+//        Console.WriteLine("Enter the employee id:");
+//        int id = Convert.ToInt32(Console.ReadLine());
+//        Console.WriteLine("Enter the name:");
+//        string? name = Console.ReadLine();
+//        Console.WriteLine("Enter the performance rating(1 to 5):");
+//        int rating = Convert.ToInt32(Console.ReadLine());
+//        Employees employees = new(id, name, rating);
+//        Employees.AddEmployee(employees);
+//        Console.WriteLine("Enter your choice:\n1.Performance based bonus \n2.Department specific Bonus\n3.Exit");
+//        switch (Convert.ToInt32(Console.ReadLine()))
+//        {
+//            case 1:
+//                BonusCalculation bonusCalculation = Employees.PerformanceBasedBonus;
+//                Console.WriteLine("Bonus:"+bonusCalculation(employees));
+
+
+//                break;
+//            case 2:
+//                BonusCalculation bonusCalculation1 = Employees.DepartmentBonus;
+//                Console.WriteLine("Bonus:"+bonusCalculation1(employees));
+
+//                break;
+//            case 3:
+//                break;
+//        }
+//    }
+//}
 class Program
 {
-    public delegate decimal BonusCalculation(Employees employees);
-
+    public delegate string EventBooking(string message);
     public static void Main(string[] args)
     {
-        Console.WriteLine("Enter the employee id:");
-        int id = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter the name:");
-        string? name = Console.ReadLine();
-        Console.WriteLine("Enter the performance rating(1 to 5):");
-        int rating = Convert.ToInt32(Console.ReadLine());
-        Employees employees = new(id, name, rating);
-        Employees.AddEmployee(employees);
-        Console.WriteLine("Enter your choice:\n1.Performance based bonus \n2.Department specific Bonus\n3.Exit");
-        switch (Convert.ToInt32(Console.ReadLine()))
+        HotelEvent hotelEvent = new HotelEvent("Wedding", "12/10/2024","Trivandrum",100);
+        EventBooking eventBooking = HotelEvent.EventRegistration;
+        if (eventBooking == null) 
         {
-            case 1:
-                BonusCalculation bonusCalculation = Employees.PerformanceBasedBonus;
-                Console.WriteLine("Bonus:"+bonusCalculation(employees));
-
-
-                break;
-            case 2:
-                BonusCalculation bonusCalculation1 = Employees.DepartmentBonus;
-                Console.WriteLine("Bonus:"+bonusCalculation1(employees));
-
-                break;
-            case 3:
-                break;
+            Console.WriteLine(eventBooking("Not Registered"));
+        }
+        else
+        {
+            Console.WriteLine(eventBooking("Event successfully registered"));
         }
     }
 }
