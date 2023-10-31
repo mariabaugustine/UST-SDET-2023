@@ -245,9 +245,13 @@ class Program
         d1.Invoke("Hello how are you");
         DelegateExample delegateExample = new DelegateExample();
         delegate2 d2 = delegateExample.Add;
-        d2(10,20);
+       // d2(10,20);
         delegate3 d3 = delegateExample.AddR;
         Console.WriteLine(d3(10,40));
+        delegate2 d4 = delegateExample.Sub;
+        // d4(45, 5);
+        delegate2 dobjall = d2 + d4;
+        dobjall(50, 25);
 
     }
 }

@@ -140,13 +140,32 @@ try
             Console.WriteLine("Customer not found");
             break;
         }
-        
-        Console.WriteLine("choose your option\n1.Add product to cart\n2.view all product\n3.place order\n4.Support\n5.view orders");
+        Console.WriteLine("Choose your option\n1.View allproduct\n2,Add product to cart\n3.Place order\n4.view orders\n5.Support");
+        //Console.WriteLine("choose your option\n1.Add product to cart\n2.view all product\n3.place order\n4.Support\n5.view orders");
         int optionuser = Convert.ToInt32(Console.ReadLine());
         switch (optionuser)
         {
 
+            
             case 1:
+                Console.WriteLine("Products are");
+                if (DigitalProduct.Products.Count == 0 && PhysicalProduct.Products.Count == 0)
+                {
+                    throw new OrderException(MyException.Errors[3]);
+                }
+                foreach (var item in DigitalProduct.Products)
+                {
+                    Console.WriteLine("Productid:{0}\tProduct Name:{1}\tPrice:{2}\tProduct Quantity:{3}\tFileFormat:{4}\tDownloadlink:{5}", item.ProductId,
+                        item.Name, item.Price, item.StockQuantity, item.FileFormat, item.DownloadLink);
+                }
+                foreach (var item in PhysicalProduct.Products)
+                {
+                    Console.WriteLine("Productid:{0}\tProduct Name:{1}\tPrice:{2}\tProduct Quantity:{3}\tWeight:{4}" +
+                        "\tDimension:{5}", item.ProductId,
+                        item.Name, item.Price, item.StockQuantity, item.Weight, item.Dimensions);
+                }
+                break;
+            case 2:
 
                 Console.WriteLine("Enter Product id for add to cart");
                 int productId = Convert.ToInt32(Console.ReadLine());
@@ -167,24 +186,6 @@ try
                 {
                     customer1.orders.Add(DigitalProduct.Products.Find(x => x.ProductId == productId));
                     Console.WriteLine("product added to cart");
-                }
-                break;
-            case 2:
-                Console.WriteLine("Products are");
-                if (DigitalProduct.Products.Count == 0 && PhysicalProduct.Products.Count == 0)
-                {
-                    throw new OrderException(MyException.Errors[3]);
-                }
-                foreach (var item in DigitalProduct.Products)
-                {
-                    Console.WriteLine("Productid:{0}\tProduct Name:{1}\tPrice:{2}\tProduct Quantity:{3}\tFileFormat:{4}\tDownloadlink:{5}", item.ProductId,
-                        item.Name, item.Price, item.StockQuantity, item.FileFormat, item.DownloadLink);
-                }
-                foreach (var item in PhysicalProduct.Products)
-                {
-                    Console.WriteLine("Productid:{0}\tProduct Name:{1}\tPrice:{2}\tProduct Quantity:{3}\tWeight:{4}" +
-                        "\tDimension:{5}", item.ProductId,
-                        item.Name, item.Price, item.StockQuantity, item.Weight, item.Dimensions);
                 }
                 break;
             case 3:
@@ -235,9 +236,6 @@ try
 
                 break;
             case 4:
-                Console.WriteLine("For enquiry:9496739548");
-                break;
-            case 5:
                 Customers customer2 = Customers.customers.Find(x => x.CustomerID == cusId);
                 if (customer2.confirmedorders.Count == 0 && customer2.confirmedordersphy.Count == 0)
                 {
@@ -257,6 +255,10 @@ try
                        "\tDimension:{5}", item.ProductId, item.Name, item.Price, item.StockQuantity, item.Weight, item.Dimensions);
                     }
                 }
+                break;
+                
+            case 5:
+                Console.WriteLine("For enquiry:9496739548");
                 break;
             default:
                 Console.WriteLine("invalid input");
