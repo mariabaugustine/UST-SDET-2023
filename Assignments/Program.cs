@@ -272,55 +272,55 @@ else
 {
     Console.WriteLine("No record found");
 }*/
-Inventory<string> inventory = new Inventory<string>();
-int option;
-do
-{
-    Console.WriteLine("Enter the choice\n1.Add Product\n2.Update Product\n3.Remove Product\n4.Search By Id\n5.Search By Name");
-    switch(Convert.ToInt32(Console.ReadLine()))
-    {
-        case 1:
-            Console.WriteLine("Enter the product Id:");
-            int id=Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the name:");
-            string?name=Console.ReadLine();
-            Console.WriteLine("Enter the price:");
-            double price=Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter the product quantity:");
-            double quantity=Convert.ToDouble(Console.ReadLine());
-            inventory.AddProduct(new GProduct<string>(id, name, price, quantity));
-            break;
-            case 2:
-            Console.WriteLine("Enter the product id to update:");
-            int p_id=Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the product name");
-            string?u_name=Console.ReadLine();
-            Console.WriteLine("Enter the price:");
-            double u_price=Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter the quantity:");
-            double u_quantity=Convert.ToDouble(Console.ReadLine());
-            inventory.UpdateProduct(p_id, u_name, u_price, u_quantity);
-            break;
-        case 3:
-            Console.WriteLine("Enter the product id");
-            int d_id=Convert.ToInt32(Console.ReadLine());
-            inventory.DeleteProduct(d_id);
-            break;
-        case 4:
-            Console.WriteLine("Enter the Product id");
-            int s_id = Convert.ToInt32(Console.ReadLine());
-            GProduct<string> proList=inventory.SearchProductById(s_id);
-            if(proList != null)
-            {
-                Console.WriteLine("Product Id:"+proList.ProductId);
-                Console.WriteLine("Name:"+proList.Price);
-                Console.WriteLine("Price:"+proList.QuantityInStock);
+//Inventory<string> inventory = new Inventory<string>();
+//int option;
+//do
+//{
+//    Console.WriteLine("Enter the choice\n1.Add Product\n2.Update Product\n3.Remove Product\n4.Search By Id\n5.Search By Name");
+//    switch(Convert.ToInt32(Console.ReadLine()))
+//    {
+//        case 1:
+//            Console.WriteLine("Enter the product Id:");
+//            int id=Convert.ToInt32(Console.ReadLine());
+//            Console.WriteLine("Enter the name:");
+//            string?name=Console.ReadLine();
+//            Console.WriteLine("Enter the price:");
+//            double price=Convert.ToDouble(Console.ReadLine());
+//            Console.WriteLine("Enter the product quantity:");
+//            double quantity=Convert.ToDouble(Console.ReadLine());
+//            inventory.AddProduct(new GProduct<string>(id, name, price, quantity));
+//            break;
+//            case 2:
+//            Console.WriteLine("Enter the product id to update:");
+//            int p_id=Convert.ToInt32(Console.ReadLine());
+//            Console.WriteLine("Enter the product name");
+//            string?u_name=Console.ReadLine();
+//            Console.WriteLine("Enter the price:");
+//            double u_price=Convert.ToDouble(Console.ReadLine());
+//            Console.WriteLine("Enter the quantity:");
+//            double u_quantity=Convert.ToDouble(Console.ReadLine());
+//            inventory.UpdateProduct(p_id, u_name, u_price, u_quantity);
+//            break;
+//        case 3:
+//            Console.WriteLine("Enter the product id");
+//            int d_id=Convert.ToInt32(Console.ReadLine());
+//            inventory.DeleteProduct(d_id);
+//            break;
+//        case 4:
+//            Console.WriteLine("Enter the Product id");
+//            int s_id = Convert.ToInt32(Console.ReadLine());
+//            GProduct<string> proList=inventory.SearchProductById(s_id);
+//            if(proList != null)
+//            {
+//                Console.WriteLine("Product Id:"+proList.ProductId);
+//                Console.WriteLine("Name:"+proList.Price);
+//                Console.WriteLine("Price:"+proList.QuantityInStock);
 
-            }
-            else
-            {
-                Console.WriteLine("List is empty");
-            }
+//            }
+//            else
+//            {
+//                Console.WriteLine("List is empty");
+//            }
  
-    }
-}
+//    }
+//}

@@ -1,5 +1,6 @@
 ﻿using DailyWork;
 using DailyWork.ExceptionMessages;
+
 //Console.WriteLine("Enter two numbers");
 //double number1, number2, answer;
 //number1 = Convert.ToInt32(Console.ReadLine());
@@ -155,7 +156,7 @@ doctor.DelApp(245, "Ravi");*/
 //gC.ListHandling();
 //gC.StackHandling();
 //gC.QueueHandling();
-ExceptionHandling exceptionHandling = new(3, 5);
+//ExceptionHandling exceptionHandling = new(3, 5);
 //try
 //{
 //    exceptionHandling.NumberCheck();
@@ -221,15 +222,34 @@ ExceptionHandling exceptionHandling = new(3, 5);
 //GenericExample<int>generic=new GenericExample<int>(new int[3] {1,2,3});
 //generic.Display();
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
-static void Swap<T>(ref T num1,ref T num2)
+//static void Swap<T>(ref T num1,ref T num2)
+//{
+//    T temp;
+//    temp = num1;    
+//    num1 = num2;
+//    num2 = temp;
+//}
+//int n1=10, n2=10;
+//char c1 = 'A', c2 = 'B';
+//Swap<int>(ref n1,ref n2);
+//Swap<char>(ref c1, ref c2);
+
+public delegate void delegate1(string message);
+public delegate void delegate2(int n1,int n2);
+public delegate int delegate3(int n1,int n2);
+class Program
 {
-    T temp;
-    temp = num1;    
-    num1 = num2;
-    num2 = temp;
+    public static void Main(string[] args)
+    {
+        delegate1 d1 = DelegateExample.MethodA;
+        d1.Invoke("Hello how are you");
+        DelegateExample delegateExample = new DelegateExample();
+        delegate2 d2 = delegateExample.Add;
+        d2(10,20);
+        delegate3 d3 = delegateExample.AddR;
+        Console.WriteLine(d3(10,40));
+
+    }
 }
-int n1=10, n2=10;
-char c1 = 'A', c2 = 'B';
-Swap<int>(ref n1,ref n2);
-Swap<char>(ref c1, ref c2);
+
 
