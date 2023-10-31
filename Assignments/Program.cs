@@ -178,7 +178,7 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //        {
 //            Console.WriteLine(ex.Message);
 //        }
-       
+
 
 /***************************************************************************************************/
 //Patient patient = new Patient();
@@ -200,7 +200,7 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //            string diagnosis = Console.ReadLine();
 //            patient.AddPatientTextFile(id, name, age, diagnosis);
 //            break;
-        
+
 //            case 2:
 //            patient.ReadDetails();
 //            break;
@@ -218,31 +218,58 @@ Console.WriteLine("Grade:" + student.CalculateGrade());*/
 //}
 //while(option!=2);
 /***********************************************************************************************/
-MedicalHistory medicalHistory = new MedicalHistory();
-int option = 1;
-do
-{
-    Console.WriteLine("Enter the choice:");
-    Console.WriteLine("1.Add Patient Record\n2.View Patient Record\n3.Exit");
-    switch (Convert.ToInt32(Console.ReadLine()))
-    {
-        case 1:
-            Console.Write("Enter the record Id:");
-            int r_id = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter the patient Id:");
-            int p_id = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter the Description:");
-            string description = Console.ReadLine();
-            Console.Write("Enter the Date:");
-            string date = Console.ReadLine();
-            medicalHistory.AddMedicalHistory(r_id, p_id, description, date);
-            medicalHistory.AddToFile(r_id, p_id, description, date);
-          break;
-        default:
-            Console.WriteLine("Invalid choice");
-            break;
-    }
-    Console.WriteLine("Do you wish to continue?\n1.Yes\n2.No");
-    option=Convert.ToInt32(Console.ReadLine());
-} while (option != 2);
+//MedicalHistory medicalHistory = new MedicalHistory();
+//int option = 1;
+//do
+//{
+//    Console.WriteLine("Enter the choice:");
+//    Console.WriteLine("1.Add Patient Record\n2.View Patient Record\n3.Exit");
+//    switch (Convert.ToInt32(Console.ReadLine()))
+//    {
+//        case 1:
+//            Console.Write("Enter the record Id:");
+//            int r_id = Convert.ToInt32(Console.ReadLine());
+//            Console.Write("Enter the patient Id:");
+//            int p_id = Convert.ToInt32(Console.ReadLine());
+//            Console.Write("Enter the Description:");
+//            string description = Console.ReadLine();
+//            Console.Write("Enter the Date:");
+//            string date = Console.ReadLine();
+//            medicalHistory.AddMedicalHistory(r_id, p_id, description, date);
+//            medicalHistory.AddToFile(r_id, p_id, description, date);
+//          break;
+//        default:
+//            Console.WriteLine("Invalid choice");
+//            break;
+//    }
+//    Console.WriteLine("Do you wish to continue?\n1.Yes\n2.No");
+//    option=Convert.ToInt32(Console.ReadLine());
+//} while (option != 2);
 
+Console.WriteLine("Enter the room number");
+int r_no=Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Room Type:Single/Double");
+string?r_type=Console.ReadLine();
+RoomReservation<HotelRoom>room_res= new RoomReservation<HotelRoom>();
+HotelRoom room=new HotelRoom(r_no,r_type,true);
+room_res.BookRoom(room);
+Console.WriteLine("Booking Details");
+
+    foreach(var item in RoomReservation<HotelRoom>.Room)
+{
+    Console.WriteLine("Room  Number:" + item.RoomNumber);
+    Console.WriteLine("Room Type:" + item.RoomType);
+    Console.WriteLine("Status:"+item.IsBooked);
+}
+Console.WriteLine("Enter the room number");
+int roomnumber=Convert.ToInt32(Console.ReadLine());
+var data=RoomReservation<HotelRoom>.Room.Find(X=>X.RoomNumber==roomnumber);
+if(data!=null)
+{
+    room_res.CancelRoom(data);
+    Console.WriteLine("Booking canceled successfully");
+}
+else
+{
+    Console.WriteLine("No record found");
+}
