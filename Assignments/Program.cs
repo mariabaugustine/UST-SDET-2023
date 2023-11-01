@@ -358,20 +358,38 @@ else
 //        }
 //    }
 //}
-class Program
-{
-    public delegate string EventBooking(string message);
-    public static void Main(string[] args)
-    {
-        HotelEvent hotelEvent = new HotelEvent("Wedding", "12/10/2024","Trivandrum",100);
-        EventBooking eventBooking = HotelEvent.EventRegistration;
-        if (eventBooking == null) 
-        {
-            Console.WriteLine(eventBooking("Not Registered"));
-        }
-        else
-        {
-            Console.WriteLine(eventBooking("Event successfully registered"));
-        }
-    }
-}
+//class Program
+//{
+//    public delegate string EventBooking(string message);
+//    public static void Main(string[] args)
+//    {
+//        HotelEvent hotelEvent = new HotelEvent("Wedding", "12/10/2024","Trivandrum",100);
+//        EventBooking eventBooking = HotelEvent.EventRegistration;
+//        if (eventBooking == null) 
+//        {
+//            Console.WriteLine(eventBooking("Not Registered"));
+//        }
+//        else
+//        {
+//            Console.WriteLine(eventBooking("Event successfully registered"));
+//        }
+//    }
+//}
+
+//TourismDestination tourism1 = new TourismDestination("Munnar", "India", 4);
+//TourismDestination tourism2 = new TourismDestination("Gavi", "India", 2);
+//TourismDestination tourism3 = new TourismDestination("Varkala", "India", 3);
+//TourismDestination.tourismDestinations.Add(tourism1);
+//TourismDestination.tourismDestinations.Add(tourism2);
+//TourismDestination.tourismDestinations.Add(tourism3);
+//TourismDestination.SortngDestination();
+TourismDestination1 tourism1 = new TourismDestination1("Dungeness","UK",4,9875);
+TourismDestination1 tourism2 = new TourismDestination1("Goa","India",3,3500);
+TourismDestination1 tourism3 = new TourismDestination1("Melbourne","Australia",3,7450);
+TourismDestination1.tourismDestination1.Add(tourism1);
+TourismDestination1.tourismDestination1.Add(tourism2);
+TourismDestination1.tourismDestination1.Add(tourism3);
+TourismDestination1.DisplayTopRated();
+TourismDestination1.SortedDestination();
+TourismDestination1.FilterDestination();
+
