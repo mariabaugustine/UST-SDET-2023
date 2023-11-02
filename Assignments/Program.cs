@@ -383,13 +383,16 @@ else
 //TourismDestination.tourismDestinations.Add(tourism2);
 //TourismDestination.tourismDestinations.Add(tourism3);
 //TourismDestination.SortngDestination();
-TourismDestination1 tourism1 = new TourismDestination1("Dungeness","UK",4,9875);
-TourismDestination1 tourism2 = new TourismDestination1("Goa","India",3,3500);
-TourismDestination1 tourism3 = new TourismDestination1("Melbourne","Australia",3,7450);
-TourismDestination1.tourismDestination1.Add(tourism1);
-TourismDestination1.tourismDestination1.Add(tourism2);
-TourismDestination1.tourismDestination1.Add(tourism3);
-TourismDestination1.DisplayTopRated();
-TourismDestination1.SortedDestination();
-TourismDestination1.FilterDestination();
-
+//TourismDestination1 tourism1 = new TourismDestination1("Dungeness","UK",4,9875);
+//TourismDestination1 tourism2 = new TourismDestination1("Goa","India",3,3500);
+//TourismDestination1 tourism3 = new TourismDestination1("Melbourne","Australia",3,7450);
+//TourismDestination1.tourismDestination1.Add(tourism1);
+//TourismDestination1.tourismDestination1.Add(tourism2);
+//TourismDestination1.tourismDestination1.Add(tourism3);
+//TourismDestination1.DisplayTopRated();
+//TourismDestination1.SortedDestination();
+//TourismDestination1.FilterDestination();
+class program
+{
+    static async Task
+}
