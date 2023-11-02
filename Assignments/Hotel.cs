@@ -17,20 +17,22 @@ namespace Assignments
 
         public string? HotelName {  get; set; }
         public int AvailabileRooms {  get; set; }
-        public async Task BookRooms(string user,int requestedRoom)
+
+        public async Task BookRooms(string?hotelName,int requestedRoom)
         {
             if(requestedRoom <=AvailabileRooms)
             {
+                Console.WriteLine($"Booking {hotelName}.... ");
                 await Task.Delay(2000);
                 AvailabileRooms = AvailabileRooms - requestedRoom;
-                Console.WriteLine($"Booking confirmed:{user} booker {requestedRoom} rooms in {HotelName}");
+                Console.WriteLine($"Booking confirmed: {requestedRoom} rooms in {HotelName}");
             }
             else
             {
-                Console.WriteLine($"Sorry {user} insufficient rooms availabile in {HotelName}");
+                Console.WriteLine($"Sorry  insufficient rooms availabile in {HotelName}");
                 
             }
-            Console.WriteLine($"Current availability in {HotelName}: {AvailabileRooms} rooms");
+            Console.WriteLine($"Current availability in {HotelName}: {AvailabileRooms}\n");
         }
     }
 }

@@ -394,5 +394,16 @@ else
 //TourismDestination1.FilterDestination();
 class program
 {
-    static async Task
+   static async Task Main(string[] args)
+    {
+        Hotel hotel1 = new Hotel("Dungeness", "UK", 4, 9875, "Amigos", 40);
+        Hotel hotel2 = new Hotel("Goa", "India", 3, 3500, "SkyLine", 29);
+        Hotel hotel3 = new Hotel("Melbourne", "Australia", 3, 7450,"Lobos", 10);
+
+        await hotel1.BookRooms("Amigos", 41);
+        await hotel2.BookRooms("SkyLine", 2);
+        await hotel3.BookRooms("Lobos", 1);
+
+    }
+
 }
