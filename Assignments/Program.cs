@@ -392,18 +392,26 @@ else
 //TourismDestination1.DisplayTopRated();
 //TourismDestination1.SortedDestination();
 //TourismDestination1.FilterDestination();
-class program
-{
-   static async Task Main(string[] args)
-    {
-        Hotel hotel1 = new Hotel("Dungeness", "UK", 4, 9875, "Amigos", 40);
-        Hotel hotel2 = new Hotel("Goa", "India", 3, 3500, "SkyLine", 29);
-        Hotel hotel3 = new Hotel("Melbourne", "Australia", 3, 7450,"Lobos", 10);
+//class program
+//{
+//   static async Task Main(string[] args)
+//    {
+//        Hotel hotel1 = new Hotel("Dungeness", "UK", 4, 9875, "Amigos", 40);
+//        Hotel hotel2 = new Hotel("Goa", "India", 3, 3500, "SkyLine", 29);
+//        Hotel hotel3 = new Hotel("Melbourne", "Australia", 3, 7450,"Lobos", 10);
 
-        await hotel1.BookRooms("Amigos", 41);
-        await hotel2.BookRooms("SkyLine", 2);
-        await hotel3.BookRooms("Lobos", 1);
+//        await hotel1.BookRooms("Amigos", 41);
+//        await hotel2.BookRooms("SkyLine", 2);
+//        await hotel3.BookRooms("Lobos", 1);
 
-    }
+//    }
 
-}
+//}
+TourPackage package1= new TourPackage(100, "Dungeness","12/12/2023",25344);
+TourPackage package2= new TourPackage(101, "Melbourne", "1/12/2023", 45344);
+TourPackage.TourPackageList.Add(package1);
+TourPackage.TourPackageList.Add(package2 );
+Thread thread1 = new Thread(TourPackage.ReserveTourPackage);
+thread1.Start();
+
+
