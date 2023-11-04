@@ -413,44 +413,57 @@ else
 //TourPackage.TourPackageList.Add(package2 );
 //Thread thread1 = new Thread(TourPackage.ReserveTourPackage);
 //thread1.Start();
-TaskItem taskItem = new TaskItem();
-while (true)
-{
-    Console.WriteLine("Enter the choice\n1.Add Task\n2.Remove Task\n3.Mark task as complete\n4.Display Task\n5.Display completed task\n6.Display pending task\n7.Exit");
-    switch (Convert.ToInt32(Console.ReadLine()))
-    {
-        case 1:
-            Console.WriteLine("Enter the task id");
-            int id = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the task description");
-            string? description = Console.ReadLine();
-            taskItem.AddTask(id, description, false);
-            break;
-        case 2:
-            Console.WriteLine("Enter the task id to remove");
-            int rid = Convert.ToInt32(Console.ReadLine());
-            taskItem.RemoveTask(rid);
-            break;
-        case 3:
-            Console.WriteLine("Enter tha task id to make it complete");
-            int m_id = Convert.ToInt32(Console.ReadLine());
-            taskItem.MarkTaskComplete(m_id);
-            break;
-        case 4:
-            taskItem.DisplayTask();
-            break;
-        case 5:
-            taskItem.displayCompletedTask();
-            break;
-        case 6:
-            taskItem.DisplayPending();
-            break;
-        case 7:
-            Environment.Exit(0);
-            break; 
-        default:
-            break;
-    }
-}
+/****************************************************************************************************/
+//TaskItem taskItem = new TaskItem();
+//while (true)
+//{
+//    Console.WriteLine("Enter the choice\n1.Add Task\n2.Remove Task\n3.Mark task as complete\n4.Display Task\n5.Display completed task\n6.Display pending task\n7.Exit");
+//    switch (Convert.ToInt32(Console.ReadLine()))
+//    {
+//        case 1:
+//            Console.WriteLine("Enter the task id");
+//            int id = Convert.ToInt32(Console.ReadLine());
+//            Console.WriteLine("Enter the task description");
+//            string? description = Console.ReadLine();
+//            taskItem.AddTask(id, description, false);
+//            break;
+//        case 2:
+//            Console.WriteLine("Enter the task id to remove");
+//            int rid = Convert.ToInt32(Console.ReadLine());
+//            taskItem.RemoveTask(rid);
+//            break;
+//        case 3:
+//            Console.WriteLine("Enter tha task id to make it complete");
+//            int m_id = Convert.ToInt32(Console.ReadLine());
+//            taskItem.MarkTaskComplete(m_id);
+//            break;
+//        case 4:
+//            taskItem.DisplayTask();
+//            break;
+//        case 5:
+//            taskItem.displayCompletedTask();
+//            break;
+//        case 6:
+//            taskItem.DisplayPending();
+//            break;
+//        case 7:
+//            Environment.Exit(0);
+//            break; 
+//        default:
+//            break;
+//    }
+//}
+/*****************************************************************************************************/
+FamilyTree familyTree = new FamilyTree();
+FamilyMember grandfather = new FamilyMember("Grand father", 70);
+FamilyMember father = new FamilyMember("Father", 40);
+FamilyMember mother = new FamilyMember("Mother", 30);
+FamilyMember child = new FamilyMember("Child", 15);
 
+familyTree.AddMember(grandfather, father);
+familyTree.AddMember(grandfather, mother);
+familyTree.AddMember(father, child);
+
+Console.WriteLine("Family Tree:");
+familyTree.DisplayFamilyMember(grandfather);
 
