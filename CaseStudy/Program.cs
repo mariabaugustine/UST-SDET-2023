@@ -117,13 +117,36 @@ internal class Program
                     int code=Convert.ToInt32(Console.ReadLine());
                     Console.Write("Enter the title:");
                     string?title=Console.ReadLine();
-                    Console.WriteLine("Enter the instructor");
+                    Console.Write("Enter the instructor");
                     string?inst=Console.ReadLine();
+                    Console.Write("Enter the maximum count");
+                    int count=Convert.ToInt32(Console.ReadLine());
                     Course course=new Course();
                     course.CourseCode= code;
                     course.Title= title;
                     course.Instructor= inst;
+                    course.MaxCount= count;
                     Course.courses.Add(course);
+                 break;
+            }
+        }
+        if(choice==2)
+        {
+            Console.WriteLine("Enter the choice:\n1.Student Registration\n.2Course Enrollment\n3.Course withdrawal");
+            switch(Convert.ToInt32(Console.ReadLine()))
+            {
+                case 1:
+                    Console.Write("Enter the student Id:");
+                    int id=Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter the Name:");
+                    string? name=Console.ReadLine();
+                    Console.WriteLine("Enter the email id");
+                    string? email=Console.ReadLine();
+                    Student student=new Student();
+                    student.StudentId= id;
+                    student.Name= name;
+                    student.Email= email;
+                    student.Students.Add(student);
                     break;
             }
         }

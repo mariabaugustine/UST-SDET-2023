@@ -12,6 +12,9 @@ namespace CaseStudy
         public string? Title { get; set; }
 
         public string? Instructor    { get; set; }
+
+        public int MaxCount {  get; set; }
+
         public static List<Course> courses = new List<Course>();
 
         public List<Student>EnrolledStudent=new List<Student>();
