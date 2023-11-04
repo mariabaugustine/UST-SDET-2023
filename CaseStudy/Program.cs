@@ -148,6 +148,14 @@ internal class Program
                     student.Email= email;
                     student.Students.Add(student);
                     break;
+                case 2:
+                    Console.WriteLine("Choose the course");
+                    Course course=new Course();
+                    Student student1 = new Student();
+                    course.CourseRegistration(course, student1);
+                    break;
+                    
+                    
             }
         }
     }

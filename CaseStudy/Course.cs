@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CaseStudy.CustomException;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,9 +22,29 @@ namespace CaseStudy
 
         
 
-        public void CourseRegistration()
+        public void CourseRegistration(Course course,Student student)
         {
-           
+           foreach(var item  in Course.courses) 
+            {
+                Console.WriteLine("Course code:"+item.CourseCode+"\t"+"Title"+item.Title+"\t"+"Instructor:"+item.Instructor);
+            }
+            Console.WriteLine("Enter the course code do you want to enroll");
+            int code=Convert.ToInt32(Console.ReadLine());
+            if(EnrolledStudent.Count>=MaxCount)
+            {
+                throw new EnrollmentException(StudentException.Errors[1]);
+
+            }
+            else if (EnrolledStudent.Contains(student))
+            {
+                Console.WriteLine($"Student {student.StudentId} already enrolled in course {code}");
+                throw new EnrollmentException(StudentException.Errors[2]);
+            }
+            else
+            {
+                EnrolledStudent.Add(student);
+                Console.WriteLine($"Student successfully registered for course {code} ");
+            }
         }
 
         public void CourseWithdrawl()
