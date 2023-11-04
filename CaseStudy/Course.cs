@@ -1,6 +1,7 @@
 ﻿using CaseStudy.CustomException;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ namespace CaseStudy
 
         
 
-        public void CourseRegistration(Course course,Student student)
+        public void CourseRegistration(Student student)
         {
            foreach(var item  in Course.courses) 
             {
@@ -30,7 +31,8 @@ namespace CaseStudy
             }
             Console.WriteLine("Enter the course code do you want to enroll");
             int code=Convert.ToInt32(Console.ReadLine());
-            if(EnrolledStudent.Count>=MaxCount)
+            var value=courses.Find(x => x.CourseCode==code);
+            if(EnrolledStudent.Count>=value.MaxCount)
             {
                 throw new EnrollmentException(StudentException.Errors[1]);
 
@@ -44,6 +46,7 @@ namespace CaseStudy
             {
                 EnrolledStudent.Add(student);
                 Console.WriteLine($"Student successfully registered for course {code} ");
+                MaxCount = MaxCount - 1;
             }
         }
 

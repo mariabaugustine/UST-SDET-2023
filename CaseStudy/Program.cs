@@ -1,5 +1,6 @@
 ﻿using CaseStudy;
 using CaseStudy.CustomException;
+using System.Reflection.Metadata.Ecma335;
 //int choice;
 //double total;
 //Book[] book = new Book[1];
@@ -101,62 +102,91 @@ using CaseStudy.CustomException;
 /***************************************************************************************************************/
 internal class Program
 {
-    public static void main(string[] args)
+    public static void Main(string[] args)
     {
         
         Console.WriteLine("************************************************Student Enrollment System*******************************");
+        while (true) 
+        { 
         Console.WriteLine("Enter the choice \n1.Admin\n2.Student");
-        int choice=Convert.ToInt32(Console.ReadLine());
-        if (choice==1)
+        int choice = Convert.ToInt32(Console.ReadLine());
+        while (true)
         {
-            Console.WriteLine("Choose option\n1.Add Course\n2.Generate Report");
-            switch(Convert.ToInt32(Console.ReadLine())) 
+           
+            if (choice == 1)
             {
-                case 1:
-                    Console.Write("Enter the course code:");
-                    int code=Convert.ToInt32(Console.ReadLine());
-                    Console.Write("Enter the title:");
-                    string?title=Console.ReadLine();
-                    Console.Write("Enter the instructor");
-                    string?inst=Console.ReadLine();
-                    Console.Write("Enter the maximum count");
-                    int count=Convert.ToInt32(Console.ReadLine());
-                    Course course=new Course();
-                    course.CourseCode= code;
-                    course.Title= title;
-                    course.Instructor= inst;
-                    course.MaxCount= count;
-                    Course.courses.Add(course);
-                 break;
+                Console.WriteLine("Choose option\n1.Add Course\n2.Generate Report");
+                switch (Convert.ToInt32(Console.ReadLine()))
+                {
+                    case 1:
+                        Console.Write("Enter the course code:");
+                        int code = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Enter the title:");
+                        string? title = Console.ReadLine();
+                        Console.Write("Enter the instructor");
+                        string? inst = Console.ReadLine();
+                        Console.Write("Enter the maximum count");
+                        int count = Convert.ToInt32(Console.ReadLine());
+                        Course course = new Course();
+                        course.CourseCode = code;
+                        course.Title = title;
+                        course.Instructor = inst;
+                        course.MaxCount = count;
+                        Course.courses.Add(course);
+                        break;
+                }
+                Console.WriteLine("Do you want to continue as a admin\n1.Yes\n2.No");
+                int opst = Convert.ToInt32(Console.ReadLine());
+                if (opst == 1)
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
             }
-        }
-        if(choice==2)
-        {
-            Console.WriteLine("Enter the choice:\n1.Student Registration\n.2Course Enrollment\n3.Course withdrawal");
-            switch(Convert.ToInt32(Console.ReadLine()))
+            if (choice == 2)
             {
-                case 1:
-                    Console.Write("Enter the student Id:");
-                    int id=Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Enter the Name:");
-                    string? name=Console.ReadLine();
-                    Console.WriteLine("Enter the email id");
-                    string? email=Console.ReadLine();
-                    Student student=new Student();
-                    student.StudentId= id;
-                    student.Name= name;
-                    student.Email= email;
-                    student.Students.Add(student);
+                Console.WriteLine("Enter the choice:\n1.Student Registration\n.2Course Enrollment\n3.Course withdrawal");
+                switch (Convert.ToInt32(Console.ReadLine()))
+                {
+                    case 1:
+                        Console.Write("Enter the student Id:");
+                        int id = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter the Name:");
+                        string? name = Console.ReadLine();
+                        Console.WriteLine("Enter the email id");
+                        string? email = Console.ReadLine();
+                        Student student = new Student();
+                        student.StudentId = id;
+                        student.Name = name;
+                        student.Email = email;
+                        student.Students.Add(student);
+                        break;
+                    case 2:
+                        Console.WriteLine("Choose the course");
+                        Course course = new Course();
+                        Student student1 = new Student();
+                        course.CourseRegistration(student1);
+                        break;
+
+
+                }
+                Console.WriteLine("Do you want to continue as a student\n1.Yes\n2.No");
+                int opst = Convert.ToInt32(Console.ReadLine());
+                if (opst == 1)
+                {
+                    continue;
+                }
+                else
+                {
                     break;
-                case 2:
-                    Console.WriteLine("Choose the course");
-                    Course course=new Course();
-                    Student student1 = new Student();
-                    course.CourseRegistration(course, student1);
-                    break;
-                    
-                    
+                }
+                }
+
             }
+            
         }
     }
 }
