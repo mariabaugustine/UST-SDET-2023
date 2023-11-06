@@ -169,6 +169,7 @@ internal class Program
                                 student.Name = name;
                                 student.Email = email;
                                 Student.Students.Add(student);
+                                Console.WriteLine("Student added successully");
 
 
                                 break;
