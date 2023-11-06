@@ -140,6 +140,19 @@ internal class Program
                                 course.MaxCount = count;
                                 Course.courses.Add(course);
                                 break;
+                            case 2:
+                                Course course1 = new Course();
+                                Console.WriteLine("******************All Courses***********************");
+                                foreach(var item in Course.courses)
+                                {
+                                    Console.WriteLine($"Course code:{item.CourseCode}\tCourse Title:{item.Title}\tInstructor:{item.Instructor}");
+                                }
+                                Console.WriteLine("*****************Enrolled Student Details*********************");
+                                foreach (var data in course1.EnrolledStudent)
+                                {
+                                    Console.WriteLine($"Name:{data.Name}\tId:{data.StudentId}\tEmail:{data.Email}");
+                                }
+                                break;
                         }
                         Console.WriteLine("Do you want to continue as a admin\n1.Yes\n2.No");
                         int opst = Convert.ToInt32(Console.ReadLine());
