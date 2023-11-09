@@ -148,9 +148,9 @@ internal class Program
                                     Console.WriteLine($"Course code:{item.CourseCode}\tCourse Title:{item.Title}\tInstructor:{item.Instructor}");
                                 }
                                 Console.WriteLine("*****************Enrolled Student Details*********************");
-                                foreach (var data in course1.EnrolledStudent)
+                                foreach (var student in course1.EnrolledStudent)
                                 {
-                                    Console.WriteLine($"Name:{data.Name}\tId:{data.StudentId}\tEmail:{data.Email}");
+                                    Console.WriteLine($"Name:{student.Name}\tId:{student.StudentId}\tEmail:{student.Email}");
                                 }
                                 break;
                         }
